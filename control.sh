@@ -16,7 +16,7 @@ show_docker_ps
 echo "-----------------------------------------"
 
 do_create() {
-	docker build --tag $DOCKER_IMAGE_NAME docker
+	docker build --tag $DOCKER_IMAGE_NAME .
 	if [ ! -e "$BASEDIR/app" ]; then
 		mkdir -p $BASEDIR/app
 		docker run \
